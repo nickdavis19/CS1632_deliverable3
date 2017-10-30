@@ -21,26 +21,6 @@ public class Test5thru8 {
 		driver.get("https://cs1632ex.herokuapp.com/");
 	}
 
-	//Fibonacci test 1 - Enter an edge invalid value for the Fibonacci page
-	//near the boundary of good values, in this case: 0 and should get "1"
-	@Test
-	public void fibonacciTest1(){
-		try {
-			WebElement elem = driver.findElement(By.linkText("Fibonacci"));
-			elem.click();
-			elem = driver.findElement(By.name("value"));
-			elem.sendKeys("0");
-			elem.submit();
-			elem = driver.findElement(By.className("jumbotron"));
-			String result = elem.getText();
-			assertTrue(result.contains("1"));
-		}
-		catch(NoSuchElementException nsee) {
-			fail();
-		}
-
-	}
-
 	//Fibonacci test 2 - Enter an invalid value for the Fibonacci page
 	// at the boundary that an int can hold, in this case: -10000000000000000000000000000000000000000000
 	// and the result should be "1"
@@ -54,6 +34,7 @@ public class Test5thru8 {
 			elem.submit();
 			elem = driver.findElement(By.className("jumbotron"));
 			String result = elem.getText();
+			result = result.substring(result.length()-2);
 			assertTrue(result.contains("1"));
 		}
 		catch(NoSuchElementException nsee) {
@@ -75,6 +56,7 @@ public class Test5thru8 {
 			elem.submit();
 			elem = driver.findElement(By.className("jumbotron"));
 			String result = elem.getText();
+			result = result.substring(result.length()-2);
 			assertTrue(result.contains("1"));
 		}
 		catch(NoSuchElementException nsee) {
@@ -95,6 +77,7 @@ public class Test5thru8 {
 			elem.submit();
 			elem = driver.findElement(By.className("jumbotron"));
 			String result = elem.getText();
+			result = result.substring(result.length()-2);
 			assertTrue(result.contains("1"));
 		}
 		catch(NoSuchElementException nsee) {
@@ -116,6 +99,7 @@ public class Test5thru8 {
 			elem.submit();
 			elem = driver.findElement(By.className("jumbotron"));
 			String result = elem.getText();
+			result = result.substring(result.length()-2);
 			assertTrue(result.contains("1"));
 		}
 		catch(NoSuchElementException nsee) {
@@ -136,6 +120,7 @@ public class Test5thru8 {
 			elem.submit();
 			elem = driver.findElement(By.className("jumbotron"));
 			String result = elem.getText();
+			result = result.substring(result.length()-2);
 			assertTrue(result.contains("1"));
 		}
 		catch(NoSuchElementException nsee) {
