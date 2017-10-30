@@ -1,5 +1,3 @@
-package t;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.junit.Assert.*;
