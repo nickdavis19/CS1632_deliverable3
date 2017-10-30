@@ -12,7 +12,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class tests {
+public class Test5thru8 {
 
 	WebDriver driver = new HtmlUnitDriver();
 
